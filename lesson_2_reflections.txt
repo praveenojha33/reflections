@@ -1,0 +1,58 @@
+What happens when you initialize a repository? Why do you need to do it?
+
+Prior to initializing a repository, changes are not tracked with git. By 
+initializing you tag the repository as one in which you want to track 
+changes. Git does not create the first commit when initialized: that is up 
+to the user, but it does prepare it to allow you to do so.
+
+___________________________________________________________________________
+How is the staging area different from the working directory and the 
+repository? What value do you think it offers?
+
+The staging area allows you to choose which files in a repository will be 
+included in a given commit. In this way you can commit only those files
+that you changed. It helps with the concept of "one logical change per
+commit" by reducing the number of potential files that might need to be
+looked through to determine where the changes in a commit are.
+
+___________________________________________________________________________
+How can you use the staging area to make sure you have one commit per 
+logical change?
+
+By ensuring you have only one file in the staging area when you commit you 
+can greatly reduce the chance that you will have more than one logical 
+change per commit, although it won't necessarily negate the chance. You 
+can still have multiple logical changes in a single file, but it is more 
+difficult to have one logical change across multiple files.
+
+___________________________________________________________________________
+What are some situations when branches would be helpful in keeping your 
+history organized? How would branches help?
+
+As described in the lesson, branches are useful for when you have working
+code and want to try a variation in functionality without breaking what you
+currently have. By branching you create a copy of the master (or wherever 
+the head is) and then "branch off" at that point. The main branch stays 
+intact and unchanged, but you are free to make any changes to the new 
+branch.
+
+___________________________________________________________________________
+How do the diagrams help you visualize the branch structure?
+
+As with any visualization activity, by drawing out the branch structure you
+can see how the commits and branches relate to each other and can readily
+identify where each branch exists in relation to the others, and which
+commits are reachable from each branch. This can help you see why a bug fix
+or feature is not included in a particlar commit that may be in a different
+branch.
+
+___________________________________________________________________________
+What is the result of merging two branches together? Why do we represent 
+it in the diagram the way we do?
+
+Merging two branches incorporates the changes from two branches into a new 
+commit. This allows developers to create new features or work 
+independently of one another and then combine their efforts into a working 
+version without stepping on each other's toes. It is represented in the 
+diagram as two branches coming together because that is effectively what 
+is happening.
